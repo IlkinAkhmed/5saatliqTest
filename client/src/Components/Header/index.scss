@@ -1,0 +1,119 @@
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+
+    .blue-side {
+        background-color: rgb(56, 56, 210);
+        z-index: -1;
+        width: 33%;
+        height: 100%;
+
+    }
+
+    .white-side {
+        background-color: rgb(224, 224, 224);
+        z-index: -1;
+        width: 67%;
+        height: 100%;
+
+    }
+
+    .header-inner {
+        display: flex;
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        left: 10%;
+        width: 90%;
+        margin: auto;
+        height: 550px;
+
+        .image {
+            width: 35%;
+            overflow: hidden;
+            background-image: url('https://preview.colorlib.com/theme/aroma/img/home/hero-banner.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .texts {
+            width: 50%;
+            padding: 0 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 10px;
+
+            span {
+                color: gray;
+                font-size: 1.8em;
+                width: fit-content;
+            }
+
+            h1 {
+                font-size: 3em;
+                font-weight: bold;
+            }
+
+            p {
+                color: gray;
+            }
+
+            button {
+                cursor: pointer;
+                background-color: blue;
+                font-weight: bold;
+                padding: 10px 25px;
+                color: white;
+                border: 1px solid transparent;
+                border-radius: 35px;
+                transition: all .3s;
+
+                &:hover {
+                    background-color: white;
+                    color: blue;
+                    border-color: blue;
+                }
+
+            }
+        }
+
+    }
+
+}
+@media screen and (max-width: 991px) {
+    header {
+        .blue-side{
+            display: none;
+        }
+        .white-side{
+            width: 100%;
+        }
+        .header-inner {
+            left: 2%!important;
+            width: 100%;
+            justify-content: center;
+            .texts{
+                width: 100%;
+                h1{
+                font-size: 2em; 
+                }
+            }
+            .image{
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 678px) and (max-width: 992px) {
+    header {
+        .header-inner {
+            left: 5%!important;
+        }
+    }
+}

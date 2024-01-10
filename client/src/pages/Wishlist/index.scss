@@ -1,0 +1,106 @@
+.products {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 100px;
+
+    .wish-head {
+        width: 100%;
+        line-height: 1.2;
+        text-align: center;
+        font-size: 2em;
+
+        i {
+            font-size: 1.5em;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 2em;
+        }
+    }
+
+    .wrapper {
+        padding: 40px 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .card {
+            width: 23%;
+            max-height: 400px;
+
+            .img {
+                overflow: hidden;
+                position: relative;
+
+                &:hover .card-icons {
+                    transform: translateY(0);
+                }
+
+                img {
+                    width: 100%;
+                }
+
+
+            }
+
+            .card-texts {
+                text-align: center;
+                padding: 10px 0;
+                height: 30%;
+
+                span {
+                    color: gray;
+                }
+
+                h3 {
+                    font-size: 1em;
+                }
+                .fa-trash-can{
+                    cursor: pointer;
+                    font-size: 1.5em;
+                    &:hover{
+                        color: blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 678px) and (max-width: 992px) {
+    .products {
+
+        .wrapper {
+            .card {
+                width: 48% !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 677px) {
+    .products {
+        padding: 50px 20px;
+
+        .wrapper {
+            .card {
+                height: 350px;
+
+                .img {
+                    height: 70%;
+                    overflow: hidden;
+                }
+
+                .card-texts {
+                    height: 30%;
+                }
+
+                width: 98% !important;
+            }
+        }
+    }
+}

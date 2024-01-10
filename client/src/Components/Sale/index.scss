@@ -1,0 +1,55 @@
+.sale {
+    width: 100%;
+    height: 400px;
+    background-image: url('	https://preview.colorlib.com/theme/aroma/img/home/parallax-bg.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+    .sale-inner {
+        width: 60%;
+        margin: auto;
+        line-height: 1.5;
+
+        h2 {
+            font-weight: bold;
+            font-size: 2.5em;
+        }
+
+        :nth-child(2) {
+            font-size: 2em;
+        }
+
+        :nth-child(3) {
+            color: gray;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: blue;
+            font-weight: bold;
+            padding: 10px 25px;
+            color: white;
+            border: 1px solid transparent;
+            border-radius: 35px;
+            transition: all .3s;
+
+            &:hover {
+                background-color: white;
+                color: blue;
+                border-color: blue;
+            }
+
+        }
+    }
+}
+@media screen and (max-width: 568px) {
+    .sale{
+        .sale-inner{
+            width: 90%;
+        }
+    }
+}
